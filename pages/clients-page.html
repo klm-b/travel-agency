@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Путевки</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="../img/favicon.png" rel="icon" />
+    <link href="../fonts/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Иконка -->
+      <a class="navbar-brand" href="#">
+        <img alt="KB logo" src="../img/kb_logo.svg" />
+      </a>
+
+      <!--Кнопка для разворачивания меню-->
+      <button
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-target="#navbarToggler"
+        data-toggle="collapse"
+        type="button"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Навигация -->
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="../index.html">
+              <i class="fas fa-home pr-1"></i>
+              <span>Главная страница</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="gallery-page.html">
+              <i class="fas fa-image pr-1"></i>
+              <span>Галлерея</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="permits-page.html">
+              <i class="fas fa-ticket-alt pr-1"></i>
+              <span>Путевки</span>
+            </a>
+          </li>
+          <li class="nav-item px-3 active">
+            <a class="nav-link" href="clients-page.html">
+              <i class="fas fa-user-friends pr-1"></i>
+              <span>Клиенты</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="basket-page.html">
+              <i class="fas fa-shopping-basket pr-1"></i>
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main class="container mt-3">
+      <div class="row py-4">
+        <div class="col">
+          <h3>Клиенты</h3>
+          <button
+            id="add-client-btn"
+            data-toggle="modal"
+            data-target="#editClientModal"
+            class="btn btn-primary m-2"
+          >
+            Добавить клиента
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="fit">ID</th>
+                <th>ФИО</th>
+                <th>Год рождения</th>
+                <th class="fit"><i class="fas fa-cogs"></i></th>
+              </tr>
+            </thead>
+
+            <tbody id="clientsContainer"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        aria-hidden="true"
+        class="modal fade"
+        id="editClientModal"
+        role="dialog"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addFilmModalLabel">
+                Редактирование клиента
+              </h5>
+              <button
+                aria-label="Close"
+                class="close"
+                data-dismiss="modal"
+                type="button"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <form id="edit-client-form">
+              <div class="modal-body">
+                <input class="form-control" id="id" name="id" type="hidden" />
+
+                <div class="mb-3">
+                  <label for="surnameNP">ФИО</label>
+                  <input
+                    class="form-control"
+                    id="surnameNP"
+                    name="surnameNP"
+                    placeholder="Фамилия Имя Отчество"
+                    required
+                    type="text"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="birthdayYear">Год рождения</label>
+                  <input
+                    class="form-control"
+                    id="birthdayYear"
+                    name="birthdayYear"
+                    placeholder="Год"
+                    required
+                    type="number"
+                    min="0"
+                  />
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                  type="button"
+                >
+                  Отмена
+                </button>
+                <button
+                  class="btn btn-outline-danger"
+                  id="delete-client-btn"
+                  data-dismiss="modal"
+                >
+                  Удалить
+                </button>
+                <input
+                  class="btn btn-primary"
+                  id="save-client-btn"
+                  type="submit"
+                  value="Сохранить"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer container-fluid bg-dark text-light">
+      <span>Клименков Богдан, ПД811, Донецк, 2020</span>
+      <a href="mailto:klm_b@outlook.com">
+        <i class="fas fa-envelope pl-2 text-success"></i>
+      </a>
+    </footer>
+
+    <!-- Скрипты загружаются в конце, чтобы страница быстрее отображалась -->
+    <script src="../js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/models/model_module.js"></script>
+    <script src="../js/task/permits-module.js"></script>
+    <script src="../js/task/clients-page-onload.js"></script>
+  </body>
+</html>

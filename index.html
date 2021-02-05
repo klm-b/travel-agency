@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Домашнее задание на 20.08.2020</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link href="img/favicon.png" rel="icon" />
+    <link href="fonts/font-awesome/css/all.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <!-- Иконка -->
+      <a class="navbar-brand" href="#">
+        <img src="img/kb_logo.svg" alt="KB logo" />
+      </a>
+
+      <!--Кнопка для разворачивания меню-->
+      <button
+        aria-controls="navbarToggler"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        class="navbar-toggler"
+        data-target="#navbarToggler"
+        data-toggle="collapse"
+        type="button"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Навигация -->
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav">
+          <li class="nav-item px-3 active">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home pr-1"></i>
+              <span>Главная страница</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="pages/gallery-page.html">
+              <i class="fas fa-image pr-1"></i>
+              <span>Галлерея</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="pages/permits-page.html">
+              <i class="fas fa-ticket-alt pr-1"></i>
+              <span>Путевки</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="pages/clients-page.html">
+              <i class="fas fa-user-friends pr-1"></i>
+              <span>Клиенты</span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="pages/basket-page.html">
+              <i class="fas fa-shopping-basket pr-1"></i>
+              <span>Корзина</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main role="main">
+      <section id="mainJumbotron" class="jumbotron">
+        <div class="container">
+          <h1 class="jumbotron-heading text-light">
+            Турагентство <b>«А-тур»</b>
+          </h1>
+          <p class="lead text-light">
+            <b
+              >Туристическая фирма «А-тур» — это молодость, профессионализм,
+              надежность и честность. Мы верим, что клиент должен отдыхать не
+              только во время своего путешествия, но и в процессе выбора и
+              решения всех сопутствующих вопросов касающихся долгожданного
+              отдыха. Поэтому своим туристам мы гарантируем индивидуальный
+              подход и качественное обслуживание на всех этапах нашей работы.</b
+            >
+          </p>
+          <p>
+            <a
+              href="pages/permits-page.html"
+              class="btn btn-primary btn-lg my-2"
+              >Выбрать путевку</a
+            >
+            <a href="#" class="btn btn-secondary btn-lg my-2">Галлерея</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="py-5">
+        <div class="py-5 container">
+          <div class="py-2 row">
+            <div class="col-lg-3 text-center">
+              <i class="fas fa-sun fa-7x text-muted"></i>
+              <p>
+                <a
+                  class="btn btn-lg btn-primary mt-3"
+                  href="pages/permits-page.html"
+                  role="button"
+                  >Путевки »</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-3 text-center">
+              <i class="fas fa-image fa-7x text-muted"></i>
+              <p>
+                <a
+                  class="btn btn-lg btn-primary mt-3"
+                  href="pages/gallery-page.html"
+                  role="button"
+                  >Галлерея »</a
+                >
+              </p>
+            </div>
+            <div class="col-lg-3 text-center">
+              <i class="fas fa-user-friends fa-7x text-muted"></i>
+              <p>
+                <a
+                  class="btn btn-lg btn-primary mt-3"
+                  href="pages/clients-page.html"
+                  role="button"
+                  >Клиенты »</a
+                >
+              </p>
+            </div>
+
+            <div class="col-lg-3 text-center">
+              <i class="fas fa-shopping-basket fa-7x text-muted"></i>
+              <p>
+                <a
+                  class="btn btn-lg btn-primary mt-3"
+                  href="pages/basket-page.html"
+                  role="button"
+                  >Корзина »</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer container-fluid bg-dark text-light">
+      <span>Клименков Богдан, ПД811, Донецк, 2020</span>
+      <a href="mailto:klm_b@outlook.com">
+        <i class="fas fa-envelope pl-2 text-success"></i>
+      </a>
+    </footer>
+
+    <script src="js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
